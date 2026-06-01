@@ -1,14 +1,38 @@
 # batch config
 
-label:          'Rijksmuseum Demo'
-description:    'Demo collection for aperitiiif service'
-attribution:    'Provided by Rijksmuseum via Wikimedia Commons'
+label:                'Ticha'
+description:          'An international effort to document and promote Zapotec languages and knowledge through workshops, events, and online resources provided to the public at no cost'
+attribution:          'Access Provided by Ticha'
 
-presentation_api_url: 'https://aperitiiif-presentation-api-store.s3.us-east-1.amazonaws.com'
-image_api_url:        'https://d1b7k5w7yjwpfg.cloudfront.net/iiif/2'
+source_dir:           'ticha' # 'src/data'
+image_output_format:  'jpg'
+
+presentation_api_url: 'https://ticha-iiif.s3.us-east-1.amazonaws.com'
+image_api_url:        'https://awy5mcn5cgxb3cxtpcyf7cp6pu0lgvmp.lambda-url.us-east-1.on.aws/iiif/3'
 
 records:
-  file: 'src/records.csv'
-  defaults:
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/6/67/Rijks_museum_logo.png'
-    source: 'https://commons.wikimedia.org/wiki/Category:Prints_by_Katsukawa_Shunsh%C5%8D_in_the_Rijksmuseum_Amsterdam'
+  label_key: 'title'
+  file: 'src/documents.csv'
+  # defaults:
+  #   logo: ''
+
+# batch:
+#   records:        
+#     source: 'src/documents.csv'
+#   assets:         
+#     source: '/Volumes/mn119/zapotec/doc_images' # 'src/data'
+#   output:
+#     image_format: 'jpg'
+
+# iiif:
+#   api_version:           3
+#   presentation_api_url: 'https://ticha-iiif.s3.us-east-1.amazonaws.com'
+#   image_api_url:        'https://awy5mcn5cgxb3cxtpcyf7cp6pu0lgvmp.lambda-url.us-east-1.on.aws/iiif/3/'
+#   collection: 
+#     label:               'Ticha'
+#     description:         'An international effort to document and promote Zapotec languages and knowledge through workshops, events, and online resources provided to the public at no cost'
+#     attribution:          'Access Provided by Ticha'
+#   manifests:
+#     label_key: 'title'
+#     metadata_keys: []
+#     # defaults:
