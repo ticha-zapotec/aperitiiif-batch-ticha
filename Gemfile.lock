@@ -96,6 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   aperitiiif!
+  rake (~> 13.0)
 
 BUNDLED WITH
    2.5.7
